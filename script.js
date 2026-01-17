@@ -1,10 +1,9 @@
-//your JS code here. If required.
 const changeBtn = document.getElementById("change_button");
-const resetBtn = document.getElementById("Reset");
+const resetBtn = document.getElementById("reset_button");
 
 function resetGrid() {
     document.querySelectorAll(".grid-item").forEach(item => {
-        item.style.backgroundColor = "transparent";
+        item.style.backgroundColor = "rgba(0, 0, 0, 0)";
     });
 }
 
@@ -14,9 +13,9 @@ changeBtn.addEventListener("click", () => {
 
     resetGrid();
 
-    const selectedBlock = document.getElementById(blockId);
-    if (selectedBlock) {
-        selectedBlock.style.backgroundColor = color;
+    const block = document.getElementById(blockId);
+    if (block) {
+        block.style.backgroundColor = color;
     }
 });
 
